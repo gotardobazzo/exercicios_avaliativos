@@ -1,7 +1,6 @@
 class Unidade_Federativa:
-    @staticmethod
-    def __init__():
-        __lista = ["Pará/PA", "Amapá/AP", "Ceará/CE", "Santa Catarina/SC"]
 
-    def get_lista(self, __lista):
-        return __lista
+    @staticmethod
+    def get_lista_uf():
+        vetor_uf = ["Santa Catarina/SC ", "Amapá/AP ", "Pará/PA ", "Ceará/CE"]
+        return vetor_uf
