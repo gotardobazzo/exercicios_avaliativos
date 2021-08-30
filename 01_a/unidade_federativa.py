@@ -1,5 +1,4 @@
 class Unidade_Federativa:
-
     @staticmethod
     def get_lista_uf():
         vetor_estado = ["- Santa Catarina ", "- Amapá ", "- Pará ", "- Ceará"]
@@ -9,4 +8,3 @@ class Unidade_Federativa:
     def get_uf():
         vetor_uf = ["SC", "AP", "PA", "CE"]
         return vetor_uf
-

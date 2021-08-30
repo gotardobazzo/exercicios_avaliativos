@@ -3,8 +3,12 @@ from unidade_federativa import Unidade_Federativa
 unestados = Unidade_Federativa.get_lista_uf()
 unuf = Unidade_Federativa.get_uf()
 
+print("Lista de Estados")
+print("___________________")
+
 for counter, value in enumerate(unestados):
     print(counter, value)
+print("___________________")
 
 for counter, value in enumerate(unuf):
     sigla = input("Escolha a numeracao do estado que deseja saber a UF: ")
@@ -16,5 +20,7 @@ for counter, value in enumerate(unuf):
         print("A UF do estado selecionado é: " + unuf[2])
     elif (sigla == "3"):
         print("A UF do estado selecionado é: " + unuf[3])
+
+
 
 
