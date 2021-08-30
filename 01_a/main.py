@@ -5,7 +5,7 @@ unuf = Unidade_Federativa.get_uf()
 
 print("LISTA DE ESTADOS")
 for counter, value in enumerate(unestados):
-    print(counter, value)
+    print(counter,"-", value)
 
 for counter, value in enumerate(unuf):
     sigla = input("Escolha o Estado para descobrir a UF: ")
