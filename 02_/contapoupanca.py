@@ -6,8 +6,7 @@ class ContaPoupanca(ContaBancaria):
         super().__init__()
         self.__descontosaldo = descontosaldo
 
-    @staticmethod
-    def cadastro_cpoupanca():
+    def cadastro_cpoupanca(self):
         print('Obrigado por escolher nossos serviços! \n Siga os passos a seguir para a criação'
                'da conta')
         cpf = input('Informe seu cpf: ')

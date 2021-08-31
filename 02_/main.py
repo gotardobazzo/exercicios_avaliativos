@@ -22,13 +22,26 @@ class Main:
         opcao = input('Digite a opção desejada: ')
         if opcao == '1':
             self.contapoupanca.cadastro_cpoupanca()
-
-        #print('3 - Aumento de Limite da Conta Corrente')
-        #print('4 - Depósito')
-        #print('5 - Saque')
+            print('1 - Depósito')
+            print('2 - Saque')
+            opcaopp = input('Digite a opção entre as desejadas: ')
+            if opcaopp == '1':
+                self.contacorrente.deposito()
+            elif opcaopp == '2':
+                self.contacorrente.saque()
 
         elif opcao == '2':
             self.contacorrente.cadastro_ccorrente()
+            print('1 - Aumento de Limite da Conta Corrente')
+            print('2 - Depósito')
+            print('3 - Saque')
+            opcaocc = input('Digite a opção entre as desejadas: ')
+            if opcaocc == '1':
+                self.contacorrente.aumentolimite()
+            elif opcaocc == '2':
+                self.contacorrente.deposito()
+            elif opcaocc == '3':
+                self.contacorrente.saque()
 
         elif opcao == '3':
             pass
