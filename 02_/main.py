@@ -47,6 +47,5 @@ class Main:
             pass
 
 main = Main()
-if main:
-    
-
+main.menu()
+main.opcoesmenu()
