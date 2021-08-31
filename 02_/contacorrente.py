@@ -1,28 +1,18 @@
 from contabancaria import ContaBancaria
 
 class ContaCorrente(ContaBancaria):
-    def __init__(self, taxamensal, aumento, saldocc, depositocc, saquecc):
+    def __init__(self, aumento, limitesaque):
         super().__init__()
-        self.__taxamensal = taxamensal
         self.__aumento = aumento
-        self.__saldocc = saldocc
-        self.__depositocc = depositocc
-        self.__saquecc = saquecc
+        self.__limitesaque = limitesaque
 
     def set_aumento(self, __aumento):
         return self.set_aumento(__aumento)
 
-    def set_depositocc(self, __deposito):
-        return self.set_deposito(__deposito)
-
-    def set_saquecc(self, __saquecc):
-        return self.set_saquecc(__saquecc)
-
-    def get_saldocc(self, __saldocc):
-        return self.__saldocc
-
-    def set_saldocc(self, __saldocc):
-        return self.__saldocc
+    def limitesaque(self, saldo):
+        global limite
+        limite = 50
+        limitesaque = saldo + limite
 
     @staticmethod
     def cadastro_ccorrente():
@@ -43,7 +33,7 @@ class ContaCorrente(ContaBancaria):
         global aument0
         aument0 = input('Você deseja aumentar o limite da sua conta corrente? S/N ')
         if aument0 == 'S' or 's':
-            aument0 = int(input('Digite o valor do aumento. O máximo do limite é R$50: '))
+            aument0 = int(input('Digite o valor do aumento. O máximo do limite é R$100: '))
             if aument0 >= 50:
                 print('Valor não disponível')
             else:
@@ -52,5 +42,6 @@ class ContaCorrente(ContaBancaria):
             pass
         else:
             print('Valor inválido')
+        aument0 = limite
 
         ContaCorrente.set_aumento(aument0)

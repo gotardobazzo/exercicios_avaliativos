@@ -34,7 +34,7 @@ class Main:
         elif opcao == '3':
             self.contacorrente.aumentolimite()
         elif opcao == '4':
-            ''
+
         elif opcao == '5':
             ''
         elif opcao == '6':

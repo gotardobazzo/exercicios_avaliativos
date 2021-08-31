@@ -2,23 +2,9 @@ from contabancaria import ContaBancaria
 
 
 class ContaPoupanca(ContaBancaria):
-    def __init__(self, taxajuro):
+    def __init__(self, descontosaldo):
         super().__init__()
-        self.__taxajuro = taxajuro
-        self.__depositopp = depositopp
-        self.__saquepp = saquepp
-
-    def get_taxajuro(self):
-        return self.__taxajuro()
-
-    def set_taxajuro(self, __taxajuro):
-        return self.set_taxajuro(__taxajuro)
-
-    def set_depositopp(self, __depositopp):
-        return self.set_depositopp(__depositopp)
-
-    def set_saquepp(self, __saquepp):
-        return self.set_saquepp(__saquepp)
+        self.__descontosaldo = descontosaldo
 
     @staticmethod
     def cadastro_cpoupanca():
@@ -33,18 +19,6 @@ class ContaPoupanca(ContaBancaria):
         ContaPoupanca.set_cpf(cpf)
         ContaPoupanca.set_senha(senha)
 
-    @staticmethod
-    def depositopoupanca():
-        global deposito
-        deposito = input('Digite o valor que você deseja depositar: ')
-        if deposito > '2000':
-            print('Este valor é alto demais')
-        else:
-            ContaPoupanca.set_deposito(deposito)
-
-    @staticmethod
-    def saquepoupanca():
-        saque = input('Digite o valor que você deseja sacar: ')
-        if saque > deposito:
-
-        ContaPoupanca.set_saque(saque)
+    def descontosaldo(self, saque, saldo):
+        if saque > saldo:
+            print('Saldo indisponível')

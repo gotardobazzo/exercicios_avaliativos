@@ -32,18 +32,30 @@ class ContaBancaria:
     def set_senha(self, __senha):
         return self.__senha
 
+    def set_saldo(self, __saldo):
+        return self.__saldo
+
+    def saldo (self):
+        global saldo
+        saldo = '0'
+        ContaBancaria.set_saldo(saldo)
+
     @staticmethod
-    def deposito():
+    def deposito(saldo):
         deposito = input('Digite o valor que você deseja depositar: ')
         if deposito > '2000':
             print('Este valor é alto demais')
         else:
             ContaBancaria.set_deposito(deposito)
+        for valor in saldo:
+            saldo = valor + deposito
 
     @staticmethod
-    def saque():
+    def saque(saldo):
         saque = input('Digite o valor que você deseja sacar: ')
         ContaBancaria.set_saque(saque)
+        for valor in saldo:
+            saldo = valor + saque
 
     def get_deposito(self):
         return self.__deposito
