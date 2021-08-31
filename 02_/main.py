@@ -47,3 +47,6 @@ class Main:
             pass
 
 main = Main()
+if main:
+    
+

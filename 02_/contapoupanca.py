@@ -2,9 +2,9 @@ from contabancaria import ContaBancaria
 
 
 class ContaPoupanca(ContaBancaria):
-    def __init__(self, descontosaldo):
+    def __init__(self):
         super().__init__()
-        self.__descontosaldo = descontosaldo
+        #self.__descontosaldo = descontosaldo
 
     def cadastro_cpoupanca(self):
         print('Obrigado por escolher nossos serviços! \n Siga os passos a seguir para a criação'

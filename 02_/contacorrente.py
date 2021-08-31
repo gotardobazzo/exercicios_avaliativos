@@ -1,18 +1,17 @@
 from contabancaria import ContaBancaria
 
 class ContaCorrente(ContaBancaria):
-    def __init__(self, aumento, limitesaque):
+    def __init__(self):
         super().__init__()
-        self.__aumento = aumento
-        self.__limitesaque = limitesaque
 
     def set_aumento(self, __aumento):
         return self.set_aumento(__aumento)
 
-    def limitesaque(self, saldo):
+    def limitesaque(self, saldo, limitesaque):
+        self.__limitesaque = limitesaque
         global limite
         limite = 50
-        limitesaque = saldo + limite
+        limitesaque = int(saldo) + limite
 
     @staticmethod
     def cadastro_ccorrente():
