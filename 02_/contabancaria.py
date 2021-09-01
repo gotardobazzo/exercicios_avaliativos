@@ -20,14 +20,14 @@ class ContaBancaria:
     def set_senha(self, __senha):
         return self.__senha
 
-    def set_saldo(self, __saldo):
-        return self.__saldo
-
     def saldo (self):
         saldo = '0'
         ContaBancaria.set_saldo(saldo)
 
-    def deposito(self, saldo):
+    def set_saldo(self, __saldo):
+        return self.__saldo
+
+    def deposito(self, __saldo):
         deposito = input('Digite o valor que você deseja depositar: ')
         if deposito > '2000':
             print('Este valor é alto demais')
@@ -35,7 +35,7 @@ class ContaBancaria:
             ContaBancaria.set_deposito(deposito)
         self.saldo = self.saldo + deposito
 
-    def saque(self, saldo):
+    def saque(self, __saldo):
         saque = input('Digite o valor que você deseja sacar: ')
         ContaBancaria.set_saque(saque)
         self.saldo = self.saldo - saque

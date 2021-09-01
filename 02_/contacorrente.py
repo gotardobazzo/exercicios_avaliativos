@@ -13,8 +13,7 @@ class ContaCorrente(ContaBancaria):
         limite = 50
         limitesaque = int(saldo) + limite
 
-    @staticmethod
-    def cadastro_ccorrente():
+    def cadastro_ccorrente(self):
 
         print('Obrigado por escolher nossos serviços! \n Siga os passos a seguir para a criação'
                'da conta')
@@ -27,8 +26,7 @@ class ContaCorrente(ContaBancaria):
         ContaCorrente.set_cpf(cpf)
         ContaCorrente.set_senha(senha)
 
-    @staticmethod
-    def aumentolimite():
+    def aumentolimite(self):
         global aument0
         aument0 = input('Você deseja aumentar o limite da sua conta corrente? S/N ')
         if aument0 == 'S' or 's':
