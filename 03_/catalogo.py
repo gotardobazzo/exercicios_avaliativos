@@ -30,5 +30,8 @@ class Main:
         print('|0 - Sair:____________________________________________________________|')
         print('|_____________________________________________________________________|')
 
+    def opcoesmenu (self):
+        pergunta = input("Digite aqui qual escolha deseja: ")
+        if pergunta ==
 main = Main()
 main.menu()

@@ -22,7 +22,7 @@ class ContaBancaria:
 
     def saldo (self):
         saldo = '0'
-        ContaBancaria.set_saldo(saldo)
+        self.__saldo = saldo
 
     def set_saldo(self, __saldo):
         return self.__saldo
@@ -32,12 +32,12 @@ class ContaBancaria:
         if deposito > '2000':
             print('Este valor é alto demais')
         else:
-            ContaBancaria.set_deposito(deposito)
+            self.__deposito = deposito
         self.saldo = self.saldo + deposito
 
     def saque(self, __saldo):
         saque = input('Digite o valor que você deseja sacar: ')
-        ContaBancaria.set_saque(saque)
+        self.__saque = saque
         self.saldo = self.saldo - saque
 
     def get_deposito(self):

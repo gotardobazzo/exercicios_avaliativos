@@ -23,8 +23,8 @@ class ContaCorrente(ContaBancaria):
         print('O número de sua agência é 0950-5')
         print('O número de sua conta é 51051-4')
 
-        ContaCorrente.set_cpf(cpf)
-        ContaCorrente.set_senha(senha)
+        self.__cpf = cpf
+        self.__senha = senha
 
     def aumentolimite(self):
         global aument0

@@ -15,8 +15,8 @@ class ContaPoupanca(ContaBancaria):
         print('O número de sua agência é 0950-5')
         print('O número de sua conta é 51051-4')
 
-        ContaPoupanca.set_cpf(cpf)
-        ContaPoupanca.set_senha(senha)
+        self.__cpf = cpf
+        self.__senha = senha
 
     def descontosaldo(self, saque, saldo):
         if saque > saldo:
