@@ -1,19 +1,13 @@
-from exercicios_avaliativos._02.contabancaria import ContaBancaria
+from contabancaria import ContaBancaria
 
 
 class ContaPoupanca(ContaBancaria):
-    def __init__(self, taxajuro):
+    def __init__(self):
         super().__init__()
-        self.__taxajuro = taxajuro
-
-    def get_taxajuro(self):
-        return self.__taxajuro()
-
-    def set_taxajuro(self, __taxajuro):
-        return self.set_taxajuro(__taxajuro)
+        #self.__descontosaldo = descontosaldo
 
     def cadastro_cpoupanca(self):
-        print ('Obrigado por escolher nossos serviços! \n Siga os passos a seguir para a criação'
+        print('Obrigado por escolher nossos serviços! \n Siga os passos a seguir para a criação'
                'da conta')
         cpf = input('Informe seu cpf: ')
         senha = int(input('Digite sua senha: '))
@@ -23,3 +17,7 @@ class ContaPoupanca(ContaBancaria):
 
         ContaPoupanca.set_cpf(cpf)
         ContaPoupanca.set_senha(senha)
+
+    def descontosaldo(self, saque, saldo):
+        if saque > saldo:
+            print('Saldo indisponível')
