@@ -26,9 +26,9 @@ class Main:
             print('2 - Saque')
             opcaopp = input('Digite a opção entre as desejadas: ')
             if opcaopp == '1':
-                self.contacorrente.deposito()
+                self.contabancaria.deposito()
             elif opcaopp == '2':
-                self.contacorrente.saque()
+                self.contabancaria.saque()
 
         elif opcao == '2':
             self.contacorrente.cadastro_ccorrente()
@@ -39,9 +39,9 @@ class Main:
             if opcaocc == '1':
                 self.contacorrente.aumentolimite()
             elif opcaocc == '2':
-                self.contacorrente.deposito()
+                self.contabancaria.deposito()
             elif opcaocc == '3':
-                self.contacorrente.saque()
+                self.contabancaria.saque()
 
         elif opcao == '3':
             pass
