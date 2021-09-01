@@ -7,7 +7,8 @@ class Disco(Genero, Artista):
         super(Disco, self).__init__(Artista)
 
     def set_disco(self, __nomeartista, __genero, __disco):
-        return self.__disco(__disco)
+        return self.disco
 
     def disco (self):
         disco = input('Digite aqui o nome do disco que você deseja adicionar: ')
+        self.disco = disco

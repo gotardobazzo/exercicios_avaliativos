@@ -3,16 +3,10 @@ from artista import Artista
 from disco import Disco
 
 class Main:
-    def __init__(self, dicionarios):
+    def __init__(self):
         self.genero = Genero(genero=str)
         self.artista = Artista(nomeartista=str)
         self.disco = Disco()
-        self.__dicionarios = dicionarios
-
-    def dicionarios(self, __dicionarios):
-        __dicionarios = {
-            self.disco, self.artista, self.genero
-        }
 
     def menu(self):
         print('|_____________________________________________________________________|')
@@ -32,6 +26,19 @@ class Main:
 
     def opcoesmenu (self):
         pergunta = input("Digite aqui qual escolha deseja: ")
-        if pergunta ==
+        if pergunta == 0:
+            pass
+
+        elif pergunta == 1:
+            self.artista = Artista
+
+        elif pergunta == 3:
+            self.genero = Genero
+
+        elif pergunta == 5:
+            self.disco = Disco
+
+
 main = Main()
 main.menu()
+main.opcoesmenu()

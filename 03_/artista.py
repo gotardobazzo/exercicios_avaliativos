@@ -7,4 +7,4 @@ class Artista:
 
     def artistanome(self):
         artista = input('Digite aqui o nome do artista que você deseja cadastrar ao catálogo: ')
-        Artista.set_artista(artista)
+        self.artistanome = artista

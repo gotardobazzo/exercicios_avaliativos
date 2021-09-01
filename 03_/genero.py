@@ -7,5 +7,4 @@ class Genero:
 
     def generonome(self):
         genero = input('Digite aqui o nome do gênero que você deseja adicionar: ')
-        Genero.set_genero(genero)
-
+        self.__genero = genero
